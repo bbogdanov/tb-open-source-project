@@ -1,0 +1,14 @@
+<h1>Todo page works!!!</h1>
+
+<div *ngIf="todo === undefined">There is no such todo item</div>
+
+<div *ngIf="todo" class="card">
+  <h3 class="card-header">{{ todo.title }}</h3>
+  <div class="card-block">
+    <div class="card-text">{{ todo.details }}</div>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-sm btn-link" (click)="deleteItem(todo)">Delete</button>
+    <a routerLink="/tasks" class="btn btn-sm btn-link">Back to task manager</a>
+  </div>
+</div>

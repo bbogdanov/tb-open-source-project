@@ -1,0 +1,62 @@
+<h3>TODO List</h3>
+
+<form (ngSubmit)="addTodoItem()" [formGroup]="todoFormGroup">
+  <label for="titleId">Title</label>
+  <input
+    id="titleId"
+    type="text"
+    [formControlName]="'title'"
+    placeholder="Enter your task..."
+  />
+
+  <label for="detailsId">Details</label>
+  <input id="detailsId" type="text" [formControlName]="'details'" />
+
+  <button type="submit">Add todo item</button>
+</form>
+
+<div
+  *ngIf="
+    todoFormGroup.get('title')?.invalid && todoFormGroup.get('title')?.dirty
+  "
+>
+  <div class="error" *ngIf="todoFormGroup.get('title')?.errors?.required">
+    Title is required.
+  </div>
+  <div class="error" *ngIf="todoFormGroup.get('title')?.errors?.minlength">
+    Title must be at least 4 characters long.
+  </div>
+</div>
+<div
+  *ngIf="
+    todoFormGroup.get('details')?.invalid && todoFormGroup.get('details')?.dirty
+  "
+>
+  <div class="error" *ngIf="todoFormGroup.get('details')?.errors?.required">
+    Description is required.
+  </div>
+</div>
+
+<form>
+  <button type="button" (click)="uploader.click()">upload file</button>
+  <input
+    #uploader
+    hidden
+    type="file"
+    (change)="onFileSelected($event)"
+    accept=".txt,.doc,.docx,application/msword"
+  />
+</form>
+
+<app-todo-item
+  *ngFor="let item of todos$ | async"
+  [item]="item"
+  (delete)="deleteTodoItem($event)"
+  (labelChanged)="updateTodoItem($event)"
+></app-todo-item>
+
+<!-- <app-todo-item *ngFor="let item of storageService.items | async"
+               [item]="item"
+               (delete)="deleteTodoItem($event)"
+               (labelChanged)="updateTodoItem($event)"
+></app-todo-item> -->

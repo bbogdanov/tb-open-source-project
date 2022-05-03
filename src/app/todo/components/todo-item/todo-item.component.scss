@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+
+  border: 1px solid #c3c3c3;
+  padding: 0.3rem;
+}
+
+.button-edit {
+  margin-left: 10px;
+}
+
+.label {
+  cursor: pointer;
+}
+
+:host > button {
+  margin-left: 1rem;
+}
