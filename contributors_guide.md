@@ -7,8 +7,8 @@ Use this repository to practise submitting and updating Pull Requests (PRs)
 
 ## What you will learn?
 - How to contribute to open source projects
-- How to maintain your fork
-- How to update your PR
+- How to fork a repository
+- How to open a Pull Request
 - and more
 
 ## The Way of Work
@@ -34,8 +34,23 @@ Then, to propose your locally done changes you push them into your forked reposi
 The diagram below show the typical workflow when contributing to an open source projects. 
 
 ![the way of work](./contribution/assets/workflow.png)
+## Install git
+Download and install the latest version of [Git](https://git-scm.com/downloads).
+## Configure your git
+Before you do anything, set up your gitconfig!
 
+```
+$ git config --global user.name "Your Name"
+$ git config --global user.email email@email.com
+```
 
+## Authenticating with GitHub from Git
+There are two ways to authenticate against GitHub
+- Connecting over SSH 
+  - [Generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+  - [Add the new SSH key into your GitHub Account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+- Connecting over HTTPS 
+  - [Create Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 ## Fork the project you want to contribute to
 
 1. Fork the repository by clicking on the fork button on the top of this page.
@@ -49,6 +64,7 @@ The diagram below show the typical workflow when contributing to an open source 
 ## Clone your fork
 
 Now clone the forked repository to your machine. Go to your GitHub account, open the forked repository, click on the code button and then click the _copy to clipboard_ icon.
+Notice that there are a few ways to clone the repository. Please choose the one that maps the way you authenticate your git with GitHub (shh or https).
 <img align="right" width="300" src="./contribution/assets/copy-to-clipboard.png" alt="copy URL to clipboard" />
 
 Open a terminal and run the following git command:
