@@ -132,7 +132,7 @@ $ git push origin BRANCH_NAME
 
 replacing `BRANCH_NAME` with the name of the branch you created earlier.
 
-### Create a Pull Request (PR)
+## Create a Pull Request (PR)
 
 By opening a pull request you propose to the upstream repository the changes you've made to your fork.
 With your PR you ask collaborators for feedback on your changes. So be prepared to receive comments and address them.
