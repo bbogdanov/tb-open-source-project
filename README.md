@@ -1,5 +1,9 @@
 # Todos
 
+## Requirements
+
+[Downloaded and Running](https://gitlab-talentboost.vmware.com/bbogdanov/front-end-day2-spring-restapi)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.13.
 
 ## Development server

@@ -1,12 +1,17 @@
 <div>
-  <span class="label" (click)="showAlert(item?.title)">{{ item?.title }}</span> -
+  <span class="label" (click)="showAlert(item?.title)">{{ item?.title }}</span>
+  -
   <span class="details">{{ item?.details }}</span>
-  <button class="button-edit" (click)="toggleEditable()" *ngIf="!isEditable">Edit</button>
+  <button class="button-edit" (click)="toggleEditable()" *ngIf="!isEditable">
+    Edit
+  </button>
   <form *ngIf="isEditable">
-    <input #labelText
-           autofocus
-           [value]="item?.title"
-           (keydown.enter)="changeLabel(labelText.value)"/>
+    <input
+      #labelText
+      autofocus
+      [value]="item?.title"
+      (keydown.enter)="changeLabel(labelText.value)"
+    />
     <button type="button" (click)="changeLabel(labelText.value)">Save</button>
   </form>
 </div>

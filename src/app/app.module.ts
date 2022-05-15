@@ -16,10 +16,12 @@ import { HomePageModule } from './home-page/todo-page.module';
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { AuthGuard } from './auth.guard';
 import { TodoResolver } from './todo/todo.resolver';
+import { CdsModule } from '@cds/angular';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    CdsModule,
     RouterModule.forRoot([
       { path: '', component: HomePageComponent },
       {
